@@ -1,0 +1,29 @@
+{
+  "name": "auto-script-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx webpack --config webpack.config.js --mode=development",
+    "build": "npm run clean && npx webpack --config webpack.config.js --mode=production",
+    "clean": "npm run clean:dist",
+    "clean:dist": "npx rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "javascript-obfuscator": "^4.0.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-obfuscator": "^3.5.1"
+  },
+  "dependencies": {}
+}
