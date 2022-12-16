@@ -2,7 +2,7 @@
  * @Author: TonyJiangWJ
  * @Date: 2019-12-09 20:42:08
  * @Last Modified by: TonyJiangWJ
- * @Last Modified time: 2022-12-16 21:04:04
+ * @Last Modified time: 2022-12-16 21:27:43
  * @Description: 
  */
 let is_pro = !!Object.prototype.toString.call(com.stardust.autojs.core.timing.TimedTask.Companion).match(/Java(Class|Object)/)
@@ -57,7 +57,7 @@ let default_config = {
   auto_check_update: false,
   github_url: '',
   // github release url 用于检测更新状态
-  github_latest_url: 'https://github.com/TonyJiangWJ/AutoScriptWB',
+  github_latest_url: 'https://api.github.com/repos/TonyJiangWJ/AutoScriptWB/releases/latest',
   // 延迟启动时延 5秒 悬浮窗中进行的倒计时时间
   delayStartTime: 5,
   device_width: device.width,
