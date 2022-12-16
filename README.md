@@ -47,7 +47,7 @@
 ### 首先安装node环境
 
 - 前往 [Node.js下载](https://nodejs.org/en/download/) 下载适合自己系统的Node.js并安装
-- 安装完在终端/命令提示符中运行，npm -v 检查是否安装成功
+- 安装完在 `终端/命令提示符` 中运行: `npm -v` 检查是否安装成功
 
 ## 代码编写
 
@@ -125,11 +125,23 @@
 
 - 目前未对打包编译的文件进行拆分，因此上述独立文件体积都会比较大
 
+## 发布更新
+
+- 修改 `src/simpleConfig.js` 中的 `github_latest_url`，改为实际你自己仓库的release地址即可 参考如下：
+
+  ```javascript
+  // github release url 用于检测更新状态
+  github_latest_url: 'https://api.github.com/repos/TonyJiangWJ/AutoScriptWB/releases/latest',
+  ```
+
+- 需发布时，可以参考本项目，创建一个release分支，只保存 `npm run build` 编译生成的 `dist` 下的内容。然后在github上对该分支创建发布包即可，后续运行 `update/检测更新.js` 便可以实现在线更新。
+- 或者也可将源码仓库和发布仓库拆分开，发布仓库保存 `dist` 下的内容，修改上述配置文件中的 `github_latest_url` 为实际仓库的发布地址即可
+
 ## 开发辅助
 
 - 在线取色工具：[图片base64取色](https://tonyjiangwj.gitee.io/statics/pic_base64.html)
 - 在线多点取色路径生成: [多点取色辅助工具](https://tonyjiangwj.gitee.io/statics/multi_color_assist.html)
-- 可视化配置工具，基于webvie和vue框架实现，H5内容在vue_configs下，新增配置项可以只修改`vue_configs/js/commponets/configuration.js` 和 `config.js` 两个文件，其他作为公用的可以不关注。如果会vue那么可以随你所想进行修改
+- 可视化配置工具，基于webvie和vue框架实现，H5内容在vue_configs下，新增配置项可以只修改`vue_configs/js/commponets/configuration/*.js` 和 `config.js` 两个文件，其他作为公用的可以不关注。如果会vue那么可以随你所想进行修改。后续版本计划将改为webpack打包的vue代码。
 - 控件可视化辅助工具 电脑上浏览器打开 `控件可视化/index.html` 按界面提示操作
 - ![96f32786b6142f8bb4e44f7b1706afcb_689323151505_v_1667630351524368_1](https://user-images.githubusercontent.com/11325805/200108292-4097b77b-954f-4739-b80a-b10281d93b8c.gif)
 

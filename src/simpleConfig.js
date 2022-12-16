@@ -55,7 +55,7 @@ let default_config = {
   warn_skipped_ignore_package: false,
   warn_skipped_too_much: false,
   auto_check_update: false,
-  github_url: '',
+  github_url: 'https://github.com/TonyJiangWJ/AutoScriptWB',
   // github release url 用于检测更新状态
   github_latest_url: 'https://api.github.com/repos/TonyJiangWJ/AutoScriptWB/releases/latest',
   // 延迟启动时延 5秒 悬浮窗中进行的倒计时时间
